@@ -124,6 +124,19 @@ public class BoardGame extends View {
 
     }
 
+
+    private void switchTurn ()
+    {
+        if (isWhiteTurn==true)
+        {
+            isWhiteTurn = false;
+        }
+        else
+        {
+            isWhiteTurn = true;
+        }
+    }
+
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         float x = event.getX();
@@ -164,28 +177,32 @@ public class BoardGame extends View {
         return true;
     }
 
+
+
     private void updateCoinAfterRelease() {
-        int x1 = 0, y1 =0; // location of the Rectangle that the coin locate on
+        int locationx = 0, locationy =0; // location of the Rectangle that the coin locate on
         for(int i=0; i< NUM_OF_SQUARES;i++)
         {
             for(int j=0; j< NUM_OF_SQUARES; j++)
             {
                 if(squares[i][j].didXandYInSquare(coin.x, coin.y))
                 {
-                    x1 = i;
-                    y1 = j;
+                    locationx = i;
+                    locationy = j;
                 }
             }
         }
 
 
-        if(squares[x1][y1].color == Color.parseColor("#C19A68"))
+        if(squares[locationx][locationy].color == Color.parseColor("#C19A68"))
         {
+
             // locate the coin in the middle of the square
-            coin.x = squares[x1][y1].x+ w/2;
-            coin.y = squares[x1][y1].y + w/2;
+            coin.x = squares[locationx][locationy].x+ w/2;
+            coin.y = squares[locationx][locationy].y + w/2;
             coin.lastX = coin.x;
             coin.lastY = coin.y;
+            switchTurn();
         }
         else
         {   // color of the square == WRITE
