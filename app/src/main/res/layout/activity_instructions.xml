@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:background="#B4D37474"
+    android:background="#A6D9D3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -25,8 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="משחק דמקה הוא אחד מהמשחקים הקלאסיים והאהובים ביותר מבין משחקי הקופסה בישראל.
-הוא שייך למשפחת משחקי הלוח, שהינם משחקים המתנהלים על גבי לוח שסומן מראש, בהתאם לכללים קבועים, וכוללים שימוש בכלי משחק שונים.
-משחקי קופסה בכלל, ודמקה בפרט, נחשבים לפעילות מהנה ומאתגרת המתאימה לילדים, בני נוער ומבוגרים כאחד.
+        דמקה נחשב לפעילות מהנה ומאתגרת המתאימה לילדים, בני נוער ומבוגרים כאחד.
 "
         android:textSize="20dp"
         android:layout_marginRight="10dp"></TextView>
@@ -96,4 +95,26 @@
 "
         android:textSize="20dp"
         android:layout_marginRight="10dp"></TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="............................................................................................................"></TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" תנועת האבנים"
+        android:textSize="25dp"
+        android:textStyle="bold"></TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="אבני המשחק הרגילות נעות רק קדימה ובאלכסון, ממשבצת שחורה אחת לשכנה פנויה.
+האבן יכולה לנוע שמאלה קדימה או ימינה קדימה, אך לא אחורה.
+לא ניתן לדלג או לעבור מעל אבן אחרת אלא אם כן מדובר במהלך אכילה."
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"></TextView>
+
 </LinearLayout>
